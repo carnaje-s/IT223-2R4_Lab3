@@ -146,7 +146,7 @@ body {                                                  /* till 147 header, 151-
     border-radius: 5px; 
 }
 
-/* BODYYYY main*/
+/* BODYYYY*/
 
 /* RIGHT Sidebar */
 
@@ -252,7 +252,7 @@ h2 {
 
 /* Notification Box */
 .notification-box {
-    background-color: #e3f2fd;
+    background-color: #97d3b3;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
