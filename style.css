@@ -11,6 +11,61 @@ body {
     flex-direction: column;
 }
 
+/*katong div class=main*/
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    height: 100%;
+}
+
+.main > * {
+    flex: 1 100%;
+    margin: 0px;
+}
+
+.footer {
+    background: rgba(116, 192, 133, 0.1);
+    margin-top: auto; /* Push the footer to the bottom */
+    padding: 20px; /* Add some padding for spacing */
+    text-align: center; /* Center-align the footer content */
+}
+
+.footer p {
+    margin: 5px 0; /* Add spacing between footer paragraphs */
+}
+
+.footer a {
+    color: #4CAF50; /* Style the link */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+@media screen and (min-width: 750px) {
+    .center {
+        flex:3;
+        order: 2;
+    }
+    .sidebar {
+        order: 1;
+    }
+    .right-sidebar {
+        order: 3
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .sidebar {
+        flex: 1;
+    }
+    .right-sidebar{
+        flex: 1;
+    }
+}
+
 /* Navbar */
 .navbar {
     position: fixed; /* Keeps navbar fixed at the top */
@@ -18,28 +73,28 @@ body {
     left: 0;
     width: 100vw; /* Full width */
     height: 60px; /* Adjust height as needed */
-    background-color: #7f5999;
-    color: white;
+    background-color: #b8a94a;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     padding: 15px 20px;
     z-index: 1000;
 }
 
-/* Logo (Left Side) */
+/* Logo*/
 .logo {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: #f3f1e4;
+    margin-right: 50px;
 }
 
-/* Icons (Left Side) */
+/* Icons */
 .icons {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 21px;
 }
 
 /* Style for FontAwesome Icons */
@@ -74,13 +129,13 @@ body {
     display: none;
     position: absolute;
     top: 30px;
-    left: -190px;
+    left: -50px;
     width: 250px;
     background: white;
     color: black;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 9px;
+    box-shadow: 0 0 10px rgba(47, 46, 46, 0.2);
+    padding: 10px;
 }
 
 .notifications h3 {
@@ -106,50 +161,369 @@ body {
     display: block;
 }
 
-/* Profile Image (Right Side) */
+/* Profile Image*/
 .profile img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    margin-left: 1144px;
 }
 
-/*katong div class=main*/
-.main {
+/* Left Sidebars */
+
+.sidebar {
+    width: 25%;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Profile Box */
+.profile-box {
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile-details {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-details li {
     display: flex;
-    flex-flow: row wrap;
-    flex: 1;
-    height: 100%;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
-.main > * {
-    flex: 1 100%;
-    margin: 0px;
+.profile-details .icon {
+    margin-right: 8px;
+    color: #555;
 }
 
-.footer {
-    background:rgba(255, 41, 41, 0.1);
-    margin-top: auto;
+/* Navigation Box */
+.nav-box {
+    background-color: #beb473;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 15px;
+    width: 100%;
 }
 
-@media screen and (min-width: 750px) {
-    .center {
-        flex:3;
-        order: 2;
-    }
-    .sidebar {
-        order: 1;
-    }
-    .right-sidebar {
-        order: 3
-    }
+/* Button Styling */
+.nav-links a {
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
 }
 
-@media screen and (min-width: 600px) {
-    .sidebar {
-        flex: 1;
-    }
-    .right-sidebar{
-        flex: 1;
-    }
+/* Icon Spacing */
+.nav-links a i {
+    margin-right: 10px;
+}
+
+/* Hover Effect (Darker Background) */
+.nav-links a:hover {
+    background: #635b25;
+    color: #000; 
+}
+
+/* Interests Box */
+.interests-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.interests-box h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.interests span {
+    background: #d4c878;;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* Notification Box */
+.notification-box {
+    background: #ceb037;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    position: relative;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Middle Column boxes */
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Ensures proper spacing */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.center {
+    width: 50%;
+    padding: 15px;
+    background: white;
+    margin: 0 auto; /* Center it horizontally */
+    display: flex;
+    flex-direction: column;
+    margin-top: 9px; /* Pushes sidebar down below navbar */
+}
+
+/*first box sa center*/
+.posttt {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.174);
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Post Box */
+.post-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.174);
+    margin-bottom: 20px;
+}
+
+/* Post Header */
+.post-header {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Profile Picture */
+.post-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Post Info */
+.post-info {
+    flex-grow: 1;
+}
+
+.post-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #777;
+    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Post Caption */
+.post-caption {
+    padding: 6px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Post Image */
+.post-image img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+/* Post Actions (Like, Comment) */
+.post-actions {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.post-actions button {
+    background: #cbc9c4;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.post-actions button:hover {
+    background: #8b864b;
+}
+
+/* RIGHT SIDEEE*/
+
+.right-sidebar {
+    width: 25%;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px; /* Pushes sidebar down below navbar */
+}
+
+/* Events Box */
+.events-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+.events-box h3 {
+    margin-bottom: 10px;
+}
+
+.events-list li {
+    list-style: none;
+    padding: 4px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Friend Request Box */
+.friend-request-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.friend-request {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align content */
+    text-align: center; /* Center-align text */
+}
+
+.friend-request h3 {
+    margin: 0 0 15px 0; /* Space below "Friend Request" */
+    font-size: 18px;
+    color: #333;
+    text-align: center; /* Center-align the heading */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.friend-request img {
+    border: 50%;
+    width: 200px;
+    height: 220px;
+    margin-right: 10px;
+}
+
+.friend-info {
+    flex-grow: 1;
+}
+
+.request-actions button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.accept-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.accept-btn:hover {
+    background: #104513; /* Darker green on hover */
+}
+
+.decline-btn {
+    background: #f44336;
+    color: white;
+}
+
+.decline-btn:hover {
+    background: #6b0c0c; /* Darker red on hover */
+}
+
+/* Ads Box */
+.ads-box {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.ads-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Ladybug Icon Box */
+.ladybug-box {
+    text-align: center;
+    font-size: 24px;
+    color: #ff4500;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
