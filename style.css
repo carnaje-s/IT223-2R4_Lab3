@@ -18,7 +18,7 @@ body {
     left: 0;
     width: 100vw; /* Full width */
     height: 60px; /* Adjust height as needed */
-    background-color: #333;
+    background-color: #7f5999;
     color: white;
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@ body {
 .icons {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
 
 /* Style for FontAwesome Icons */
@@ -74,13 +74,13 @@ body {
     display: none;
     position: absolute;
     top: 30px;
-    left: -50px;
+    left: -190px;
     width: 250px;
     background: white;
     color: black;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 9px;
 }
 
 .notifications h3 {
