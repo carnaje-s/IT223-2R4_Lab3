@@ -24,26 +24,6 @@ body {
     margin: 0px;
 }
 
-.footer {
-    background: rgba(116, 192, 133, 0.1);
-    margin-top: auto; /* Push the footer to the bottom */
-    padding: 20px; /* Add some padding for spacing */
-    text-align: center; /* Center-align the footer content */
-}
-
-.footer p {
-    margin: 5px 0; /* Add spacing between footer paragraphs */
-}
-
-.footer a {
-    color: #4CAF50; /* Style the link */
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
 @media screen and (min-width: 750px) {
     .center {
         flex:3;
@@ -187,6 +167,10 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    border-bottom: 2px solid #ddd;
 }
 
 .profile-pic {
@@ -430,25 +414,55 @@ body {
 /* Events Box */
 .events-box {
     background: white;
-    padding: 15px;
+    padding: 13px; /* Add padding to match friend-request-box */
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match shadow */
     margin-bottom: 15px;
-}
-.events-box h3 {
-    margin-bottom: 10px;
+    text-align: center; /* Center-align content */
 }
 
-.events-list li {
-    list-style: none;
-    padding: 4px 0;
-    border-bottom: 2px solid #ddd;
+.events-box h3 {
+    font-size: 16px; /* Match font size */
+    color: #333; /* Match text color */
+    margin-bottom: 15px; /* Add space below the heading */
+}
+
+.events-box img {
+    width: 200px; /* Match image size */
+    height: 220px; /* Match image size */
+    margin-bottom: 15px; /* Add space below the image */
+}
+
+.eventcon {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align content */
+}
+
+.eventcon p {
+    margin: 5px 0; /* Add spacing between paragraphs */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Match text color */
+}
+
+.eventcon button {
+    border: none;
+    padding: 6px 9px; /* Match button padding */
+    border-radius: 5px; /* Match button border radius */
+    cursor: pointer;
+    background: #bbc778; /* Match button color */
+    color: rgb(3, 0, 0); /* Match button text color */
+    margin-top: 10px; /* Add space above the button */
+}
+
+.eventcon button:hover {
+    background: #41491a; /* Match hover effect */
 }
 
 /* Friend Request Box */
 .friend-request-box {
     background: white;
-    padding: 15px;
+    padding: 13px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
@@ -462,18 +476,16 @@ body {
 }
 
 .friend-request h3 {
-    margin: 0 0 15px 0; /* Space below "Friend Request" */
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
-    text-align: center; /* Center-align the heading */
-    width: 100%; /* Ensure it spans the full width */
+    text-align: center; 
 }
 
 .friend-request img {
     border: 50%;
     width: 200px;
     height: 220px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .friend-info {
@@ -494,7 +506,7 @@ body {
 }
 
 .accept-btn:hover {
-    background: #104513; /* Darker green on hover */
+    background: #104513; 
 }
 
 .decline-btn {
@@ -503,7 +515,7 @@ body {
 }
 
 .decline-btn:hover {
-    background: #6b0c0c; /* Darker red on hover */
+    background: #6b0c0c; 
 }
 
 /* Ads Box */
